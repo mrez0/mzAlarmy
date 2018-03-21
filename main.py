@@ -13,7 +13,7 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(673, 294)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("alarm-outline/alarm-outline/32x32.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet("background-color: rgb(0, 0, 0);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -65,10 +65,16 @@ class Ui_MainWindow(object):
         self.actionSettings.setObjectName("actionSettings")
         self.actionSet_Alarms = QtWidgets.QAction(MainWindow)
         self.actionSet_Alarms.setObjectName("actionSet_Alarms")
+        self.actionDsiable_All_Alarms = QtWidgets.QAction(MainWindow)
+        self.actionDsiable_All_Alarms.setObjectName("actionDsiable_All_Alarms")
+        self.actionEnable_All_Alarms = QtWidgets.QAction(MainWindow)
+        self.actionEnable_All_Alarms.setObjectName("actionEnable_All_Alarms")
         self.menuFile.addAction(self.actionSettings)
         self.menuFile.addSeparator()
         self.menuFile.addAction(self.actionExit)
         self.menuAlarms.addAction(self.actionSet_Alarms)
+        self.menuAlarms.addAction(self.actionEnable_All_Alarms)
+        self.menuAlarms.addAction(self.actionDsiable_All_Alarms)
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuAlarms.menuAction())
 
@@ -77,10 +83,12 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "mzAlarmy"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "mzAlarmy 0.1"))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.menuAlarms.setTitle(_translate("MainWindow", "Alarms"))
         self.actionExit.setText(_translate("MainWindow", "Exit"))
         self.actionSettings.setText(_translate("MainWindow", "Settings..."))
         self.actionSet_Alarms.setText(_translate("MainWindow", "Set Alarms"))
+        self.actionDsiable_All_Alarms.setText(_translate("MainWindow", "Dsiable All Alarms"))
+        self.actionEnable_All_Alarms.setText(_translate("MainWindow", "Enable All Alarms"))
 
