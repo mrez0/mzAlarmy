@@ -26,6 +26,7 @@ class SetAlarms(QtWidgets.QDialog):
         self.ui.close_button.clicked.connect(self.close_dialog)
         self.ui.add_button.clicked.connect(self.add_alarm)
         self.ui.alarms_list.currentItemChanged.connect(self.enable_remove_button)
+        self.ui.remove_button.clicked.connect(self.remove_alarm)
 
     def add_alarm(self):
         time = self.ui.timeEdit.time().toString('hh:mm') # Converting QTimeEdit to str
@@ -57,3 +58,9 @@ class SetAlarms(QtWidgets.QDialog):
         for alarm in alarms:
             if alarm:
                 QtWidgets.QListWidgetItem(alarm, self.ui.alarms_list)
+
+    def remove_alarm(self):
+        """Removing alarm from list"""
+        alarms = self.ui.alarms_list.selectedItems()
+        for alarm in alarms:
+            self.ui.alarms_list.takeItem(self.ui.alarms_list.row(alarm))
