@@ -27,7 +27,8 @@
       <item>
        <widget class="QLCDNumber" name="hrsLabel">
         <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 0);</string>
+         <string notr="true">color: rgb(255, 255, 0);
+border: none;</string>
         </property>
         <property name="digitCount">
          <number>2</number>
@@ -43,7 +44,8 @@
       <item>
        <widget class="QLCDNumber" name="minsLabel">
         <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
+         <string notr="true">color: rgb(255, 255, 255);
+border: none;</string>
         </property>
         <property name="digitCount">
          <number>2</number>
@@ -58,6 +60,9 @@
       </item>
       <item>
        <widget class="QLCDNumber" name="secsLabel">
+        <property name="styleSheet">
+         <string notr="true">border: none;</string>
+        </property>
         <property name="digitCount">
          <number>2</number>
         </property>
