@@ -21,6 +21,16 @@ class MzAlarmy(QtWidgets.QMainWindow):
         self.ui.minsLabel.display('')
         self.ui.secsLabel.display('')
 
+        # Setting events
+        self.set_events()
+
+        # Setting alarms
+        self.initialize_alarms()
+
+        # Setting alarm mp3
+        self.p = vlc.MediaPlayer("alarm.mp3")
+
+    def set_events(self):
         # Setting constant timer (ie. setinterval in javascript) to update time on screen
         self.constant_timer = QtCore.QTimer()
         self.constant_timer.timeout.connect(self.update_time)
@@ -28,12 +38,6 @@ class MzAlarmy(QtWidgets.QMainWindow):
 
         # Menu events
         self.ui.actionSet_Alarms.triggered.connect(self.open_set_alarms)
-
-        # Setting alarms
-        self.initialize_alarms()
-
-        # Setting alarm mp3
-        self.p = vlc.MediaPlayer("alarm.mp3")
 
     def update_time(self):
         """Updating time every second"""
