@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>mzAlarmy</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon.png</normaloff>icon.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(0, 0, 0);</string>
   </property>
@@ -97,6 +101,8 @@ selection-background-color: rgb(255, 255, 0);</string>
      <string>Alarms</string>
     </property>
     <addaction name="actionSet_Alarms"/>
+    <addaction name="actionEnable_All_Alarms"/>
+    <addaction name="actionDsiable_All_Alarms"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuAlarms"/>
@@ -115,6 +121,16 @@ selection-background-color: rgb(255, 255, 0);</string>
   <action name="actionSet_Alarms">
    <property name="text">
     <string>Set Alarms</string>
+   </property>
+  </action>
+  <action name="actionDsiable_All_Alarms">
+   <property name="text">
+    <string>Dsiable All Alarms</string>
+   </property>
+  </action>
+  <action name="actionEnable_All_Alarms">
+   <property name="text">
+    <string>Enable All Alarms</string>
    </property>
   </action>
  </widget>
