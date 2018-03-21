@@ -93,6 +93,13 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>timeEdit</tabstop>
+  <tabstop>add_button</tabstop>
+  <tabstop>close_button</tabstop>
+  <tabstop>remove_button</tabstop>
+  <tabstop>alarms_list</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

@@ -49,6 +49,10 @@ class Ui_SetAlarms(object):
 
         self.retranslateUi(SetAlarms)
         QtCore.QMetaObject.connectSlotsByName(SetAlarms)
+        SetAlarms.setTabOrder(self.timeEdit, self.add_button)
+        SetAlarms.setTabOrder(self.add_button, self.close_button)
+        SetAlarms.setTabOrder(self.close_button, self.remove_button)
+        SetAlarms.setTabOrder(self.remove_button, self.alarms_list)
 
     def retranslateUi(self, SetAlarms):
         _translate = QtCore.QCoreApplication.translate
