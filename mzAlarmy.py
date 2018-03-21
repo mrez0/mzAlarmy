@@ -47,6 +47,7 @@ class MzAlarmy(QtWidgets.QMainWindow):
         from set_alarms import SetAlarms
 
         dialog = SetAlarms()
+        self.initialize_alarms()
 
     def get_alarms(self):
         f = open('alarms.txt', 'r')
@@ -62,7 +63,7 @@ class MzAlarmy(QtWidgets.QMainWindow):
         for alarm_item in alarms_list:
             seconds_to_alarm = get_seconds_to_alarm(alarm_item)
             alarm_timer = QtCore.QTimer()
-            alarm_timer.singleShot(seconds_to_alarm * 1000, self.alarm)
+            alarm_timer.singleShot(int(seconds_to_alarm * 1000), self.alarm)
 
     def alarm(self):
         print('tick')
