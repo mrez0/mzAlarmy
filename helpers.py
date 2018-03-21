@@ -7,7 +7,7 @@ def get_seconds_to_alarm(alarm_str):
     now = datetime.now()
     alarm = datetime.now()
 
-    alarm = alarm.replace(hour=int(alarm_hr), minute=int(alarm_mt))
+    alarm = alarm.replace(hour=int(alarm_hr), minute=int(alarm_mt), second=0)
 
     now_timestamp = now.timestamp()
     alarm_timestamp = alarm.timestamp()
